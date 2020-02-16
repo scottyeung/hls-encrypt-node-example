@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+</head>
+<body>
+<h2 align="center">Upload Here</h2>
+<form method="post" enctype="multipart/form-data" action="/upload-video" onsubmit="return check()">
+    <input id="upload-file" type="file" name="file">
+    <input type="submit" class="button blue" value="Upload">
+</form>
+
+</body>
+<script>
+    var upload_file = document.getElementById('upload-file');
+    function check(){
+        if(upload_file.value.length>0){
+            return true;
+        }else{
+            alert('Please choose a MP4 file');
+            return false;
+        }
+    }
+</script>
+</html>

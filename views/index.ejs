@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+    <style>
+        .index-btns {
+            margin-top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<h2 align="center">Rebecca Uploads Her Video Here</h2>
+<input id="index-data" type="hidden"
+        <% if(data){ %>
+       value="<%= JSON.stringify(data) %>"
+        <% } %>
+>
+
+<div class="index-btns" align="center">
+    <table border="1">
+        <tr>
+            <td id="index-upload-tip">Not Uploaded</td>
+            <td><a href="/upload">
+                    <button class="button blue">Upload</button>
+                </a></td>
+        </tr>
+        <tr>
+            <td id="index-encrypt-tip">Encrypt To Stream</td>
+            <td><a href="/encrypt">
+                    <button id="index-encrypt-btn" class="button blue">Encrypt To Stream</button>
+                </a></td>
+        </tr>
+        <tr>
+            <td id="index-login-tip">Login</td>
+            <td><a href="/login">
+                    <button id="index-login-btn" class="button blue">Login</button>
+                </a></td>
+        </tr>
+        <tr>
+            <td id="index-play-tip">Test Video</td>
+            <td><a href="/player">
+                    <button id="index-play-btn" class="button blue">Test Video</button>
+                </a></td>
+        </tr>
+    </table>
+</div>
+</body>
+<script src="javascripts/utils.js"></script>
+<script src="javascripts/index.js"></script>
+</html>

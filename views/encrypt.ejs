@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+    <style>
+        .encrypt-out-style {
+            width: 1000px;
+            margin: 0 auto;
+            height: 100%;
+            border: dashed 1px ;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<h2 align="center">Encrypt Your Video Here</h2>
+<input id="encrypt-btn" type="button" class="button blue" value="Encrypt Your Video">
+<input id="encrypt-success" type="button" class="button blue" value="Continue">
+<input id="encrypt-data" type="hidden"
+        <% if(data){ %>
+       value="<%= JSON.stringify(data) %>"
+        <% } %>
+>
+<div>
+    <p id="encrypt-tip">Wait until see "Encrypt OK"</p>
+    <pre id="encrypt-out" align="left"></pre>
+</div>
+</body>
+<script src="javascripts/utils.js"></script>
+<script src="javascripts/socket.io.js"></script>
+<script src="javascripts/encrypt.js"></script>
+
+</html>

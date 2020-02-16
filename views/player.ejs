@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+    <link rel="stylesheet" type="text/css" href="libs/videojs/video-js.min.css">
+    <style>
+        h5{
+            color: #077cff;
+        }
+    </style>
+</head>
+<body>
+<h2 align="center">Test Your Video Here</h2>
+<h5 id="player-tip" align="center">Type your original file name here, e.g. 'Thomas Brinkmann.mp4', just put 'Thomas Brinkmann'</h5>
+<div class="player-test">
+    <label>Put your original file name without the quote like the example</label>
+    <input id="player-name" name="player-name" type="text">
+    
+    <br>
+    <button id="player-test-btn" type="button" class="button blue">Verify</button>
+    <button id="player-play-btn" type="button" class="button blue">Play</button>
+</div>
+<div class="player-container obj-disable" id="player-container" align="center">
+    <video id="my-video" class="video-js" width='600' height='300' controls>
+    </video>
+</div>
+</body>
+<script src="javascripts/utils.js"></script>
+<script src="libs/videojs/video.min.js"></script>
+<script src="libs/videojs-contrib-hls/videojs-contrib-hls.js"></script>
+<script src="javascripts/player.js"></script>
+</html>
